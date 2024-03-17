@@ -24,6 +24,19 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  // Zürich
+  let zurichElement = document.querySelector("#zurich");
+  if (zurichElement) {
+    let zurichDateElement = zurichElement.querySelector(".date");
+    let zurichTimeElement = zurichElement.querySelector(".time");
+    let zurichTime = moment().tz("Europe/Zürich");
+
+    zurichDateElement.innerHTML = zurichTime.format("MMMM Do YYYY");
+    zurichTimeElement.innerHTML = zurichTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
