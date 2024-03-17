@@ -25,15 +25,15 @@ function updateTime() {
     );
   }
 
-  // China (Shanghai)
-  let chinaElement = document.querySelector("#china");
-  if (chinaElement) {
-    let chinaDateElement = chinaElement.querySelector(".date");
-    let chinaTimeElement = chinaElement.querySelector(".time");
-    let chinaTime = moment().tz("Asia/Shanghai");
+  // Shanghai
+  let shanghaiElement = document.querySelector("#shanghai");
+  if (shanghaiElement) {
+    let shanghaiDateElement = shanghaiElement.querySelector(".date");
+    let shanghaiTimeElement = shanghaiElement.querySelector(".time");
+    let shanghaiTime = moment().tz("Asia/Shanghai");
 
-    chinaDateElement.innerHTML = chinaTime.format("MMMM Do YYYY");
-    chinaTimeElement.innerHTML = chinaTime.format(
+    shanghaiDateElement.innerHTML = shanghaiTime.format("MMMM Do YYYY");
+    shanghaiTimeElement.innerHTML = shanghaiTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
