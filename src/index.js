@@ -25,15 +25,15 @@ function updateTime() {
     );
   }
 
-  // Zürich
-  let zurichElement = document.querySelector("#zurich");
-  if (zurichElement) {
-    let zurichDateElement = zurichElement.querySelector(".date");
-    let zurichTimeElement = zurichElement.querySelector(".time");
-    let zurichTime = moment().tz("Europe/Zürich");
+  // China (Shanghai)
+  let chinaElement = document.querySelector("#china");
+  if (chinaElement) {
+    let chinaDateElement = chinaElement.querySelector(".date");
+    let chinaTimeElement = chinaElement.querySelector(".time");
+    let chinaTime = moment().tz("Asia/Shanghai");
 
-    zurichDateElement.innerHTML = zurichTime.format("MMMM Do YYYY");
-    zurichTimeElement.innerHTML = zurichTime.format(
+    chinaDateElement.innerHTML = chinaTime.format("MMMM Do YYYY");
+    chinaTimeElement.innerHTML = chinaTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
